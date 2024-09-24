@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Tailwind Css Commands</title>
+        <title>Tailwind Setup</title>
         <link
             rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
@@ -15,10 +15,10 @@
     </head>
     <body>
         <section>
-            <h3 style="border: none">Install "Node.js" before starting</h3>
+            <h3 style="border: none">Tailwind Setup Commands</h3>
         </section>
         <section>
-            <h3>Tailwind Setup</h3>
+            <h3>Install "Node.js" before starting</h3>
             <div class="container">
                 <div class="item">
                     <div class="text" id="1">npm init -y</div>
@@ -26,14 +26,21 @@
                         <i class="fa-solid fa-clipboard"></i>
                     </button>
                 </div>
-                <p>Use in Terminal. For creating <span>package.json</span> file.</p>
+                <p>Use in Terminal to create <span>package.json</span> file.</p>
                 <div class="item">
-                    <div class="text" id="2">&nbsp; "start": "vite"</div>
+                    <div class="text" id="2">
+                        &nbsp; "start": "vite",<br />&nbsp; "dev": "vite build"
+                    </div>
                     <button type="button" onclick="copy(2)">
                         <i class="fa-solid fa-clipboard"></i>
                     </button>
                 </div>
-                <p>Go to "package.json" and replace line no 6.<br><span>"test": "echo \"Error: no test specified\" && exit 1"</span></p>
+                <p>
+                    Go to "package.json" and replace line no 6.<br />
+                    <span>
+                        "test": "echo \"Error: no test specified\" && exit 1"
+                    </span>
+                </p>
                 <div class="item">
                     <div class="text" id="3">
                         npm install -D tailwindcss postcss autoprefixer vite
@@ -42,21 +49,32 @@
                         <i class="fa-solid fa-clipboard"></i>
                     </button>
                 </div>
-                <p>Use in Terminal. For installing <span>"TailwindCss"</span>, <span>"PostCss"</span>, <span>"AutoPrefixer"</span> and <span>"Vite"</span>.</p>
+                <p>
+                    Use in Terminal to install <span>"TailwindCss"</span>,
+                    <span>"PostCss"</span>, <span>"AutoPrefixer"</span> and
+                    <span>"Vite"</span>.
+                </p>
                 <div class="item">
                     <div class="text" id="4">npx tailwindcss init -p</div>
                     <button type="button" onclick="copy(4)">
                         <i class="fa-solid fa-clipboard"></i>
                     </button>
                 </div>
-                <p>Use in Terminal. For creating <span>postcss.config.js</span> and <span>tailwind.config.js</span>files.</p>
+                <p>
+                    Use in Terminal to create
+                    <span>postcss.config.js</span> and
+                    <span>tailwind.config.js</span>files.
+                </p>
                 <div class="item">
                     <div class="text" id="5">&nbsp; content: ['*'],</div>
                     <button type="button" onclick="copy(5)">
                         <i class="fa-solid fa-clipboard"></i>
                     </button>
                 </div>
-                <p>Go to <span>"tailwind.config.js"</span> and replace line no 3.<br><span>content: [],</span></p>
+                <p>
+                    Go to <span>"tailwind.config.js"</span> and replace line no
+                    3.<br /><span>content: [],</span>
+                </p>
                 <div class="item">
                     <div class="text" id="6">
                         @tailwind base;<br />
@@ -67,16 +85,38 @@
                         <i class="fa-solid fa-clipboard"></i>
                     </button>
                 </div>
-                <p>Now create your css file and paste it.</p>
+                <p>Create your css file and paste these lines at the top.</p>
                 <div class="item">
                     <div class="text" id="7">npm run start</div>
                     <button type="button" onclick="copy(7)">
                         <i class="fa-solid fa-clipboard"></i>
                     </button>
                 </div>
-                <p>Use in Terminal. To run your page in live server.</p>
+                <p>Use in Terminal to run your page in live server.</p>
+                <div class="item">
+                    <div class="text" id="7">npm run start</div>
+                    <button type="button" onclick="copy(7)">
+                        <i class="fa-solid fa-clipboard"></i>
+                    </button>
+                </div>
+                <p>
+                    After completing your project. Use it in Terminal to compile
+                    your project.
+                </p>
             </div>
-        </section>     
+        </section>
+        <section class="footer">
+            <h3>Details</h3>
+            <div class="details">
+                <p>Status: <span style="color: red;">Closed!</span></p>
+                <p>Started on: <span>24 September 2024</span></p>
+                <p>Last Update: <span>24 September 2024</span></p>
+                <p>Total Time Spent: <span>02H 20M</span></p>
+            </div>
+        </section>
+        <section class="footer">
+            <p>Created by <span>Nuru</span></p>
+        </section>
         <!--  -->
         <script src="script.js"></script>
     </body>

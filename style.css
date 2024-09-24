@@ -58,3 +58,16 @@ p {
 span {
     color: black;
 }
+.footer p {
+    border: none;
+    padding: 6px 0;
+}
+.details {
+    padding: 6px 0;
+}
+.footer span {
+    color: green;
+}
+.red {
+    color: red;
+}
