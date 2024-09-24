@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Tailwind Css Commands</title>
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+            integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <section>
+            <h3 style="border: none">Install "Node.js" before starting</h3>
+        </section>
+        <section>
+            <h3>Tailwind Setup</h3>
+            <div class="container">
+                <div class="item">
+                    <div class="text" id="1">npm init -y</div>
+                    <button type="button" onclick="copy(1)">
+                        <i class="fa-solid fa-clipboard"></i>
+                    </button>
+                </div>
+                <p>Use in Terminal. For creating <span>package.json</span> file.</p>
+                <div class="item">
+                    <div class="text" id="2">&nbsp; "start": "vite"</div>
+                    <button type="button" onclick="copy(2)">
+                        <i class="fa-solid fa-clipboard"></i>
+                    </button>
+                </div>
+                <p>Go to "package.json" and replace line no 6.<br><span>"test": "echo \"Error: no test specified\" && exit 1"</span></p>
+                <div class="item">
+                    <div class="text" id="3">
+                        npm install -D tailwindcss postcss autoprefixer vite
+                    </div>
+                    <button type="button" onclick="copy(3)">
+                        <i class="fa-solid fa-clipboard"></i>
+                    </button>
+                </div>
+                <p>Use in Terminal. For installing <span>"TailwindCss"</span>, <span>"PostCss"</span>, <span>"AutoPrefixer"</span> and <span>"Vite"</span>.</p>
+                <div class="item">
+                    <div class="text" id="4">npx tailwindcss init -p</div>
+                    <button type="button" onclick="copy(4)">
+                        <i class="fa-solid fa-clipboard"></i>
+                    </button>
+                </div>
+                <p>Use in Terminal. For creating <span>postcss.config.js</span> and <span>tailwind.config.js</span>files.</p>
+                <div class="item">
+                    <div class="text" id="5">&nbsp; content: ['*'],</div>
+                    <button type="button" onclick="copy(5)">
+                        <i class="fa-solid fa-clipboard"></i>
+                    </button>
+                </div>
+                <p>Go to <span>"tailwind.config.js"</span> and replace line no 3.<br><span>content: [],</span></p>
+                <div class="item">
+                    <div class="text" id="6">
+                        @tailwind base;<br />
+                        @tailwind components;<br />
+                        @tailwind utilities;
+                    </div>
+                    <button type="button" onclick="copy(6)">
+                        <i class="fa-solid fa-clipboard"></i>
+                    </button>
+                </div>
+                <p>Now create your css file and paste it.</p>
+                <div class="item">
+                    <div class="text" id="7">npm run start</div>
+                    <button type="button" onclick="copy(7)">
+                        <i class="fa-solid fa-clipboard"></i>
+                    </button>
+                </div>
+                <p>Use in Terminal. To run your page in live server.</p>
+            </div>
+        </section>     
+        <!--  -->
+        <script src="script.js"></script>
+    </body>
+</html>
