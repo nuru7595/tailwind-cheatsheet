@@ -7,114 +7,182 @@
         <link
             rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
-            integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
-            crossorigin="anonymous"
-            referrerpolicy="no-referrer"
         />
         <link rel="stylesheet" href="style.css" />
     </head>
     <body>
         <section>
-            <h3 style="border: none">Tailwind Setup Commands</h3>
+            <div class="container">
+                <h3 style="border: none" class="text-center">Tailwind Setup</h3>
+                <p class="text-center">
+                    Install <span>Node.js</span> before starting the process.
+                </p>
+            </div>
         </section>
         <section>
-            <h3>Install "Node.js" before starting</h3>
             <div class="container">
+                <p>
+                    <span>Step 1: </span>Create an Empty Folder and open it in
+                    VS Code.
+                </p>
+                <p>
+                    <span>Step 2: </span>Open Terminal and run the following
+                    code to create <span>package.json</span> file.
+                </p>
                 <div class="item">
-                    <div class="text" id="1">npm init -y</div>
+                    <code class="text" id="1">npm init -y</code>
                     <button type="button" onclick="copy(1)">
                         <i class="fa-solid fa-clipboard"></i>
                     </button>
                 </div>
-                <p>Use in Terminal to create <span>package.json</span> file.</p>
+            </div>
+        </section>
+        <section>
+            <div class="container">
+                <p>
+                    <span>Step 3: </span>Open <span>package.json</span> file and
+                    replace line no 6 <span>"test": "echo \"Error: no test specified\" && exit 1"</span> with the following code.
+                </p>
                 <div class="item">
-                    <div class="text" id="2">
-                        &nbsp; "start": "vite",<br />&nbsp; "dev": "vite build"
-                    </div>
+                    <code class="text" id="2">
+                        &nbsp;&nbsp;&nbsp; "watch": "tailwindcss -i ./input.css
+                        -o ./output.css --watch"
+                    </code>
                     <button type="button" onclick="copy(2)">
                         <i class="fa-solid fa-clipboard"></i>
                     </button>
                 </div>
-                <p>
-                    Go to "package.json" and replace line no 6.<br />
-                    <span>
-                        "test": "echo \"Error: no test specified\" && exit 1"
-                    </span>
-                </p>
+            </div>
+        </section>
+        <section>
+            <div class="container">
+                <p><span>Step 4: </span>Go to Terminal and run the following code to Install Tailwind Css in your Project.</p>
                 <div class="item">
-                    <div class="text" id="3">
-                        npm install -D tailwindcss postcss autoprefixer vite
-                    </div>
+                    <code class="text" id="3">
+                        npm install -D tailwindcss
+                    </code>
                     <button type="button" onclick="copy(3)">
                         <i class="fa-solid fa-clipboard"></i>
                     </button>
                 </div>
-                <p>
-                    Use in Terminal to install <span>"TailwindCss"</span>,
-                    <span>"PostCss"</span>, <span>"AutoPrefixer"</span> and
-                    <span>"Vite"</span>.
-                </p>
+            </div>
+        </section>
+        <section>
+            <div class="container">
+                <p><span>Step 5: </span>Run the following code again in Terminal to create <span>tailwind.config.js</span> file.</p>
                 <div class="item">
-                    <div class="text" id="4">npx tailwindcss init -p</div>
+                    <code class="text" id="4">npx tailwindcss init</code>
                     <button type="button" onclick="copy(4)">
                         <i class="fa-solid fa-clipboard"></i>
                     </button>
                 </div>
-                <p>
-                    Use in Terminal to create
-                    <span>postcss.config.js</span> and
-                    <span>tailwind.config.js</span>files.
-                </p>
+            </div>
+        </section>
+        <section>
+            <div class="container">
+                <p><span>Step 6: </span>Open <span>tailwinnd.config.js</span> file and select everything and replace with the following codes.</p>
                 <div class="item">
-                    <div class="text" id="5">&nbsp; content: ['*'],</div>
+                    <code class="text" id="5">
+                        /** @type {import('tailwindcss').Config} */<br>
+                        module.exports = {<br>
+                        &nbsp; content: ["./*.{html,js}"],<br>
+                        &nbsp; theme: {<br>
+                        &nbsp;&nbsp;&nbsp; extend: {},<br>
+                        &nbsp; },<br>
+                        plugins: [],<br>
+                        }
+                    </code>
                     <button type="button" onclick="copy(5)">
                         <i class="fa-solid fa-clipboard"></i>
                     </button>
                 </div>
-                <p>
-                    Go to <span>"tailwind.config.js"</span> and replace line no
-                    3.<br /><span>content: [],</span>
-                </p>
+            </div>
+        </section>
+        <section>
+            <div class="container">
+                <p><span>Step 7: </span>Create a new file, name it <span>input.css</span>, open the file and paste the following codes.</p>
                 <div class="item">
-                    <div class="text" id="6">
+                    <code class="text" id="6">
                         @tailwind base;<br />
                         @tailwind components;<br />
                         @tailwind utilities;
-                    </div>
+                    </code>
                     <button type="button" onclick="copy(6)">
                         <i class="fa-solid fa-clipboard"></i>
                     </button>
                 </div>
-                <p>Create your css file and paste these lines at the top.</p>
-                <div class="item">
-                    <div class="text" id="7">npm run start</div>
-                    <button type="button" onclick="copy(7)">
-                        <i class="fa-solid fa-clipboard"></i>
-                    </button>
-                </div>
-                <p>Use in Terminal to run your page in live server.</p>
-                <div class="item">
-                    <div class="text" id="7">npm run dev</div>
-                    <button type="button" onclick="copy(7)">
-                        <i class="fa-solid fa-clipboard"></i>
-                    </button>
-                </div>
-                <p>
-                    After completing your project. Use it in Terminal to compile
-                    your project.
-                </p>
             </div>
         </section>
-        <section class="footer">
-            <h3>Details</h3>
-            <div class="details">
-                <p>Status: <span style="color: red;">Closed!</span></p>
+        <section>
+            <div class="container">
+                <p><span>Step 8: </span>Create a new file, name it <span>index.html</span>, open the file and paste the following codes.</p>
+                <div class="item">
+                    <code class="text" id="7">
+                        &lt;!DOCTYPE html&gt;<br>
+                        &lt;html lang="en"&gt;<br>
+                        &nbsp;&nbsp;&nbsp; &lt;head&gt;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;meta charset="UTF-8" /&gt;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;meta name="viewport" content="width=device-width, initial-scale=1.0" /&gt;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;!--~~~~~~~~~~~~~~~ Favicon ~~~~~~~~~~~~~~~--&gt;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon" /&gt;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;!--~~~~~~~~~~~~~~~ Icon ~~~~~~~~~~~~~~~--&gt;<br>
+                        <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;!--~~~~~~~~~~~~~~~ CSS ~~~~~~~~~~~~~~~--&gt;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;link rel="stylesheet" href="./output.css" /&gt;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;!--~~~~~~~~~~~~~~~ Title ~~~~~~~~~~~~~~~--&gt;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;title&gt;Website&lt;/title&gt;<br>
+                        &nbsp;&nbsp;&nbsp; &lt;/head&gt;<br>
+                        &nbsp;&nbsp;&nbsp; &lt;body&gt;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;!--~~~~~~~~~~~~~~~ Header ~~~~~~~~~~~~~~~--&gt;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;header&gt;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;h1&gt;Hello World&lt;/h1&gt;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/header&gt;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;!--~~~~~~~~~~~~~~~ Main ~~~~~~~~~~~~~~~--&gt;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;main&gt;&lt;/main&gt;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;!--~~~~~~~~~~~~~~~ Footer ~~~~~~~~~~~~~~~--&gt;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;footer&gt;&lt;/footer&gt;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;!--~~~~~~~~~~~~~~~ Js ~~~~~~~~~~~~~~~--&gt;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;script src=""&gt;&lt;/script&gt;<br>
+                        &nbsp;&nbsp;&nbsp; &lt;/body&gt;<br>
+                        &lt;/html&gt;
+                    </code>
+                    <button style="align-self: flex-start; margin-top: 8px;" type="button" onclick="copy(7)">
+                        <i class="fa-solid fa-clipboard"></i>
+                    </button>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="container">
+                <p><span>Step 9: </span>Go to Terminal and run the following code to compile css file named <span>output.css</span>.</p>
+                <div class="item">
+                    <div class="text" id="8">npm run watch</div>
+                    <button type="button" onclick="copy(8)">
+                        <i class="fa-solid fa-clipboard"></i>
+                    </button>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="container">
+                <p><span>Step 10: </span>Now open your project with live server and keep editing.</p>
+            </div>
+        </section>
+        <section>
+            <div class="container text-center">
+                <p class="red">Never edit <span>output.css</span> file it will automatically genarate your styles.</p>
+                <p class="red">If you want to upload your project do not upload everything. Upload only <span>index.html</span>, <span>output.css</span>,<span>Js</span> files and <span>Assets</span>.</p>
+            </div>
+        </section>
+        <section class="footer text-center">
+            <div class="container">
+                <p>Status: <span style="color: red">Closed!</span></p>
                 <p>Started on: <span>24 September 2024</span></p>
-                <p>Last Update: <span>24 September 2024</span></p>
-                <p>Total Time Spent: <span>02H 20M</span></p>
+                <p>Last Update: <span>26 September 2024</span></p>
+                <p>Total Time Spent: <span>04H 21M</span></p>
             </div>
         </section>
-        <section class="footer">
+        <section class="footer text-center">
             <p>Created by <span>Nuru</span></p>
         </section>
         <!--  -->

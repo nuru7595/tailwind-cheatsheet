@@ -11,14 +11,22 @@ section {
     background-color: white;
     border: 2px solid #0ea5e9;
     border-radius: 8px;
-    width: 80%;
+    width: 85%;
     margin: 24px auto;
 }
+.container {
+    padding: 12px;
+}
 h3 {
-    border-bottom: 2px solid #0ea5e9;
-    text-align: center;
     color: #0ea5e9;
-    padding: 12px 0;
+    padding-bottom: 12px;
+}
+.text-center {
+    text-align: center;
+}
+p {
+    color: #0ea5e9;
+    line-height: 30px;
 }
 .item {
     display: flex;
@@ -26,8 +34,8 @@ h3 {
     justify-content: space-between;
     border: 2px solid #0ea5e9;
     border-radius: 8px;
-    padding: 12px;
-    margin: 24px 12px;
+    padding: 5px 12px;
+    margin: 12px 0 0;
 }
 .text {
     width: 100%;
@@ -43,31 +51,27 @@ button {
     padding: 3px 12px;
     outline: none;
     cursor: pointer;
+    transition: color, background-color .3s;
 }
-button:active {
+button:hover {
     color: white;
     background-color: #0ea5e9;
 }
-p {
-    padding: 0 12px 12px;
-    border-bottom: 2px solid #0ea5e9;
+button:active {
     color: #0ea5e9;
-    text-align: center;
-    line-height: 30px;
+    background-color: white;
 }
 span {
     color: black;
-}
-.footer p {
-    border: none;
-    padding: 6px 0;
-}
-.details {
-    padding: 6px 0;
+    font-weight: 600;
+    text-decoration: underline;
 }
 .footer span {
     color: green;
 }
 .red {
     color: red;
+}
+.footer p {
+    padding: 6px 0;
 }
