@@ -9,24 +9,21 @@ body {
 }
 section {
     background-color: white;
-    border: 2px solid #0ea5e9;
     border-radius: 8px;
     width: 85%;
-    margin: 24px auto;
+    margin: 16px auto;
 }
 .container {
     padding: 12px;
 }
 h3 {
     color: #0ea5e9;
-    padding-bottom: 12px;
 }
 .text-center {
     text-align: center;
 }
 p {
     color: #0ea5e9;
-    line-height: 30px;
 }
 .item {
     display: flex;
